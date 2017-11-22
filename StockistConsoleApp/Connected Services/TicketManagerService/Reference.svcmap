@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1695880d-4f53-4bcb-abad-4717fa136046" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:53550/TicketManagerService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TicketManagerService.xsd" MetadataType="Schema" ID="a6cc584c-660d-49d2-a0ca-753055f23a1b" SourceId="1" SourceUrl="http://localhost:53550/TicketManagerService.svc?xsd=xsd0" />
+    <MetadataFile FileName="TicketManagerService.disco" MetadataType="Disco" ID="5a48833b-1aa9-488a-b7d0-046347a9713b" SourceId="1" SourceUrl="http://localhost:53550/TicketManagerService.svc?disco" />
+    <MetadataFile FileName="TicketManagerService1.xsd" MetadataType="Schema" ID="5f28dac8-74d9-418c-810d-de099ecaf9f2" SourceId="1" SourceUrl="http://localhost:53550/TicketManagerService.svc?xsd=xsd2" />
+    <MetadataFile FileName="TicketServiceManager.wsdl" MetadataType="Wsdl" ID="595d94a2-a339-4222-9845-daaab647e6c8" SourceId="1" SourceUrl="http://localhost:53550/TicketManagerService.svc?wsdl" />
+    <MetadataFile FileName="TicketManagerService2.xsd" MetadataType="Schema" ID="64e00e85-d548-43bf-a758-4eb04cabb972" SourceId="1" SourceUrl="http://localhost:53550/TicketManagerService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

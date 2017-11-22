@@ -5,6 +5,30 @@ VisualStudioVersion = 15.0.26730.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfTicketServiceLibrary", "WcfTicketServiceLibrary\WcfTicketServiceLibrary.csproj", "{31DFEE4F-9237-43B1-A527-723F1636316F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfTicketService", "WcfTicketService\WcfTicketService.csproj", "{7CBD39C5-C320-46E0-B2C2-8D3F05EB5C09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfTicketManager", "WcfTicketManager\WcfTicketManager.csproj", "{0A4A1A81-8BC5-4647-9588-7BE3D2B91AA6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7CBD39C5-C320-46E0-B2C2-8D3F05EB5C09} = {7CBD39C5-C320-46E0-B2C2-8D3F05EB5C09}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WcfTicket", "WcfTicket", "{657AD666-3EB7-4E12-98CC-154F7AF38978}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientConsoleApp", "ClientConsoleApp\ClientConsoleApp.csproj", "{769A0E3A-A558-4EEC-A9FB-D05459F75662}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B8D5A664-A57F-413E-9BA6-155326E641B5} = {B8D5A664-A57F-413E-9BA6-155326E641B5}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockistConsoleApp", "StockistConsoleApp\StockistConsoleApp.csproj", "{E61A8425-D971-49A5-8ABB-1E3274FE4AFC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0A4A1A81-8BC5-4647-9588-7BE3D2B91AA6} = {0A4A1A81-8BC5-4647-9588-7BE3D2B91AA6}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfTicketSeller", "WcfTicketSeller\WcfTicketSeller.csproj", "{B8D5A664-A57F-413E-9BA6-155326E641B5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0A4A1A81-8BC5-4647-9588-7BE3D2B91AA6} = {0A4A1A81-8BC5-4647-9588-7BE3D2B91AA6}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +39,33 @@ Global
 		{31DFEE4F-9237-43B1-A527-723F1636316F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31DFEE4F-9237-43B1-A527-723F1636316F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31DFEE4F-9237-43B1-A527-723F1636316F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CBD39C5-C320-46E0-B2C2-8D3F05EB5C09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CBD39C5-C320-46E0-B2C2-8D3F05EB5C09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CBD39C5-C320-46E0-B2C2-8D3F05EB5C09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CBD39C5-C320-46E0-B2C2-8D3F05EB5C09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A4A1A81-8BC5-4647-9588-7BE3D2B91AA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A4A1A81-8BC5-4647-9588-7BE3D2B91AA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A4A1A81-8BC5-4647-9588-7BE3D2B91AA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A4A1A81-8BC5-4647-9588-7BE3D2B91AA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{769A0E3A-A558-4EEC-A9FB-D05459F75662}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{769A0E3A-A558-4EEC-A9FB-D05459F75662}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{769A0E3A-A558-4EEC-A9FB-D05459F75662}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{769A0E3A-A558-4EEC-A9FB-D05459F75662}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E61A8425-D971-49A5-8ABB-1E3274FE4AFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E61A8425-D971-49A5-8ABB-1E3274FE4AFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E61A8425-D971-49A5-8ABB-1E3274FE4AFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E61A8425-D971-49A5-8ABB-1E3274FE4AFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8D5A664-A57F-413E-9BA6-155326E641B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8D5A664-A57F-413E-9BA6-155326E641B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8D5A664-A57F-413E-9BA6-155326E641B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8D5A664-A57F-413E-9BA6-155326E641B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{31DFEE4F-9237-43B1-A527-723F1636316F} = {657AD666-3EB7-4E12-98CC-154F7AF38978}
+		{7CBD39C5-C320-46E0-B2C2-8D3F05EB5C09} = {657AD666-3EB7-4E12-98CC-154F7AF38978}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5CA92C8E-C3B6-49DD-8B3F-3305E9BC4EA6}
