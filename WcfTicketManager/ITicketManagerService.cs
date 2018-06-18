@@ -23,5 +23,8 @@ namespace WcfTicketManager
 
         [OperationContract]
         bool UpdateToSold(Guid id);
+
+        [OperationContract]
+        void DeleteAllTickets();
     }
 }

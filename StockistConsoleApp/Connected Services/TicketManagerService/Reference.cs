@@ -159,6 +159,12 @@ namespace StockistConsoleApp.TicketManagerService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITicketManagerService/UpdateToSold", ReplyAction="http://tempuri.org/ITicketManagerService/UpdateToSoldResponse")]
         System.Threading.Tasks.Task<bool> UpdateToSoldAsync(System.Guid id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITicketManagerService/DeleteAllTickets", ReplyAction="http://tempuri.org/ITicketManagerService/DeleteAllTicketsResponse")]
+        void DeleteAllTickets();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITicketManagerService/DeleteAllTickets", ReplyAction="http://tempuri.org/ITicketManagerService/DeleteAllTicketsResponse")]
+        System.Threading.Tasks.Task DeleteAllTicketsAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -210,6 +216,14 @@ namespace StockistConsoleApp.TicketManagerService {
         
         public System.Threading.Tasks.Task<bool> UpdateToSoldAsync(System.Guid id) {
             return base.Channel.UpdateToSoldAsync(id);
+        }
+        
+        public void DeleteAllTickets() {
+            base.Channel.DeleteAllTickets();
+        }
+        
+        public System.Threading.Tasks.Task DeleteAllTicketsAsync() {
+            return base.Channel.DeleteAllTicketsAsync();
         }
     }
 }

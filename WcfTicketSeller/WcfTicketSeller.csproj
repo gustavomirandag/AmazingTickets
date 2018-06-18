@@ -87,7 +87,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Model\Exception\EmptyQueueException.cs" />
+    <Compile Include="Model\Exception\EmptyQueueFaultException.cs" />
     <Compile Include="TicketSellerService.svc.cs">
       <DependentUpon>TicketSellerService.svc</DependentUpon>
     </Compile>

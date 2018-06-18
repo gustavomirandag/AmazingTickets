@@ -140,15 +140,21 @@ namespace ClientConsoleApp.TicketSellerService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="EmptyQueueException", Namespace="http://schemas.datacontract.org/2004/07/WcfTicketSeller.Model.Exception")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="EmptyQueueFaultException", Namespace="http://schemas.datacontract.org/2004/07/WcfTicketSeller.Model.Exception")]
     [System.SerializableAttribute()]
-    public partial class EmptyQueueException : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class EmptyQueueFaultException : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string MessageField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool ResultField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -161,6 +167,19 @@ namespace ClientConsoleApp.TicketSellerService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Description {
+            get {
+                return this.DescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
+                    this.DescriptionField = value;
+                    this.RaisePropertyChanged("Description");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string Message {
             get {
                 return this.MessageField;
@@ -169,6 +188,19 @@ namespace ClientConsoleApp.TicketSellerService {
                 if ((object.ReferenceEquals(this.MessageField, value) != true)) {
                     this.MessageField = value;
                     this.RaisePropertyChanged("Message");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Result {
+            get {
+                return this.ResultField;
+            }
+            set {
+                if ((this.ResultField.Equals(value) != true)) {
+                    this.ResultField = value;
+                    this.RaisePropertyChanged("Result");
                 }
             }
         }
@@ -188,7 +220,7 @@ namespace ClientConsoleApp.TicketSellerService {
     public interface ITicketSellerService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITicketSellerService/BuyTicket", ReplyAction="http://tempuri.org/ITicketSellerService/BuyTicketResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ClientConsoleApp.TicketSellerService.EmptyQueueException), Action="http://tempuri.org/ITicketSellerService/BuyTicketEmptyQueueExceptionFault", Name="EmptyQueueException", Namespace="http://schemas.datacontract.org/2004/07/WcfTicketSeller.Model.Exception")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ClientConsoleApp.TicketSellerService.EmptyQueueFaultException), Action="http://tempuri.org/ITicketSellerService/BuyTicketEmptyQueueFaultExceptionFault", Name="EmptyQueueFaultException", Namespace="http://schemas.datacontract.org/2004/07/WcfTicketSeller.Model.Exception")]
         ClientConsoleApp.TicketSellerService.Ticket BuyTicket();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITicketSellerService/BuyTicket", ReplyAction="http://tempuri.org/ITicketSellerService/BuyTicketResponse")]

@@ -21,11 +21,11 @@ namespace WcfTicketSeller
         public Ticket BuyTicket()
         {
             Ticket ticket;
-            ticketsQueue.TryDequeue(out ticket);
+            bool result = ticketsQueue.TryDequeue(out ticket);
 
-            if (ticket == null && ticketsQueue.Count == 0)
-                throw new FaultException<EmptyQueueException>(
-                    new EmptyQueueException("Queue is empty"));
+            if (result == false)
+                throw new FaultException<EmptyQueueFaultException>(
+                    new EmptyQueueFaultException(false, "Queue is empty!", "It was not possible to buy the ticket. Queue is empty!"));
 
             return ticket;
 
@@ -46,6 +46,7 @@ namespace WcfTicketSeller
             {
                 cli.Open();
                 tickets = cli.GetAllTickets()?.Where(t => t.AvaiableToSell)?.ToArray();
+                cli.DeleteAllTickets();
                 cli.Close();
             }
 

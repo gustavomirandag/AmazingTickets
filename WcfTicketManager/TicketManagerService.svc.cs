@@ -32,8 +32,13 @@ namespace WcfTicketManager
         }
 
         public Ticket[] GetAllTickets()
-        {
+        {   
             return tickets.Values.ToArray<Ticket>();
+        }
+
+        public void DeleteAllTickets()
+        {
+            tickets.Clear();
         }
 
         public bool UpdateToSold(Guid id)

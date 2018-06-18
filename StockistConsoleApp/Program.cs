@@ -14,6 +14,7 @@ namespace StockistConsoleApp
             using (var client = new TicketManagerServiceClient())
             {
                 client.Open();
+                client.DeleteAllTickets();
                 for (int i=0; i< 200; i++)
                     client.AddTicket("RockInRio", DateTime.Now, "Recreio", 300);
                 client.Close();

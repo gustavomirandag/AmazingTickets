@@ -14,8 +14,8 @@
   <wsdl:message name="ITicketSellerService_BuyTicket_OutputMessage">
     <wsdl:part name="parameters" element="tns:BuyTicketResponse" />
   </wsdl:message>
-  <wsdl:message name="ITicketSellerService_BuyTicket_EmptyQueueExceptionFault_FaultMessage">
-    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/WcfTicketSeller.Model.Exception" name="detail" element="q1:EmptyQueueException" />
+  <wsdl:message name="ITicketSellerService_BuyTicket_EmptyQueueFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/WcfTicketSeller.Model.Exception" name="detail" element="q1:EmptyQueueFaultException" />
   </wsdl:message>
   <wsdl:message name="ITicketSellerService_GetAvaiableTickets_InputMessage">
     <wsdl:part name="parameters" element="tns:GetAvaiableTickets" />
@@ -27,7 +27,7 @@
     <wsdl:operation name="BuyTicket">
       <wsdl:input wsaw:Action="http://tempuri.org/ITicketSellerService/BuyTicket" message="tns:ITicketSellerService_BuyTicket_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITicketSellerService/BuyTicketResponse" message="tns:ITicketSellerService_BuyTicket_OutputMessage" />
-      <wsdl:fault wsaw:Action="http://tempuri.org/ITicketSellerService/BuyTicketEmptyQueueExceptionFault" name="EmptyQueueExceptionFault" message="tns:ITicketSellerService_BuyTicket_EmptyQueueExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ITicketSellerService/BuyTicketEmptyQueueFaultExceptionFault" name="EmptyQueueFaultExceptionFault" message="tns:ITicketSellerService_BuyTicket_EmptyQueueFaultExceptionFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetAvaiableTickets">
       <wsdl:input wsaw:Action="http://tempuri.org/ITicketSellerService/GetAvaiableTickets" message="tns:ITicketSellerService_GetAvaiableTickets_InputMessage" />
@@ -44,8 +44,8 @@
       <wsdl:output>
         <soap:body use="literal" />
       </wsdl:output>
-      <wsdl:fault name="EmptyQueueExceptionFault">
-        <soap:fault use="literal" name="EmptyQueueExceptionFault" namespace="" />
+      <wsdl:fault name="EmptyQueueFaultExceptionFault">
+        <soap:fault use="literal" name="EmptyQueueFaultExceptionFault" namespace="" />
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="GetAvaiableTickets">

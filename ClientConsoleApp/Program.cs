@@ -50,7 +50,7 @@ namespace ClientConsoleApp
 
         private static void ExecuteAsClient()
         {
-            Ticket ticket;
+            Ticket ticket  = null;
             using (var cli = new TicketSellerServiceClient())
             {
                 cli.Open();
@@ -60,10 +60,17 @@ namespace ClientConsoleApp
                     {
                         ticket = cli.BuyTicket();
                     }
-                    catch(FaultException<EmptyQueueException> ex)
+                    catch(FaultException<TicketSellerService.EmptyQueueFaultException> ex)
                     {
-                        Console.WriteLine(ex.Message);
+                        Console.WriteLine("FaultException in thread 1:");
+                        Console.WriteLine($" - Result: {ex.Detail.Result}");
+                        Console.WriteLine($" - Message: {ex.Detail.Message}");
+                        Console.WriteLine($" - Description: {ex.Detail.Description}");
                         break;
+                    }
+                    catch(Exception ex)
+                    {
+                        Console.WriteLine($"Erro: {ex.Message}");
                     }
                     if (ticket != null)
                         countTicketsByClient1++;
@@ -74,7 +81,7 @@ namespace ClientConsoleApp
         }
         private static void ExecuteAsClient2()
         {
-            Ticket ticket;
+            Ticket ticket = null;
             using (var cli = new TicketSellerServiceClient())
             {
                 cli.Open();
@@ -84,10 +91,17 @@ namespace ClientConsoleApp
                     {
                         ticket = cli.BuyTicket();
                     }
-                    catch (FaultException<EmptyQueueException> ex)
+                    catch (FaultException<EmptyQueueFaultException> ex)
                     {
-                        Console.WriteLine(ex.Message);
+                        Console.WriteLine("FaultException in thread 2:");
+                        Console.WriteLine($" - Result: {ex.Detail.Result}");
+                        Console.WriteLine($" - Message: {ex.Detail.Message}");
+                        Console.WriteLine($" - Description: {ex.Detail.Description}");
                         break;
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Erro: {ex.Message}");
                     }
                     if (ticket != null)
                         countTicketsByClient2++;

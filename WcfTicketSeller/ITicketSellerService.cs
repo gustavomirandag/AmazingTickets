@@ -15,7 +15,7 @@ namespace WcfTicketSeller
     public interface ITicketSellerService
     {
         [OperationContract]
-        [FaultContract(typeof(EmptyQueueException))]
+        [FaultContract(typeof(EmptyQueueFaultException))]
         Ticket BuyTicket();
 
         [OperationContract]

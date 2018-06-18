@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f9527b8e-f889-4dc2-a802-9d910921775e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="197ba3fa-f505-463a-b626-2254c0b3c64d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,12 +22,12 @@
     <MetadataSource Address="http://localhost:53736/TicketSellerService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="TicketSellerService2.xsd" MetadataType="Schema" ID="f56b10a1-2120-4240-82fd-660a6af0ea2f" SourceId="1" SourceUrl="http://localhost:53736/TicketSellerService.svc?xsd=xsd0" />
-    <MetadataFile FileName="TicketSellerService.wsdl" MetadataType="Wsdl" ID="f23e4886-b3f0-4a0c-9682-ede76eed1e08" SourceId="1" SourceUrl="http://localhost:53736/TicketSellerService.svc?wsdl" />
-    <MetadataFile FileName="TicketSellerService.xsd" MetadataType="Schema" ID="9741acdd-befd-4e8a-91b1-f06c37097a8a" SourceId="1" SourceUrl="http://localhost:53736/TicketSellerService.svc?xsd=xsd1" />
-    <MetadataFile FileName="TicketSellerService1.xsd" MetadataType="Schema" ID="bc6fd8da-6f59-4862-b519-0052397b6327" SourceId="1" SourceUrl="http://localhost:53736/TicketSellerService.svc?xsd=xsd2" />
-    <MetadataFile FileName="TicketSellerService.disco" MetadataType="Disco" ID="9e8fb072-d11e-4f54-82e0-6bc3f57dd71a" SourceId="1" SourceUrl="http://localhost:53736/TicketSellerService.svc?disco" />
-    <MetadataFile FileName="TicketSellerService3.xsd" MetadataType="Schema" ID="424f6671-c205-4a1a-a039-de56bd02dd42" SourceId="1" SourceUrl="http://localhost:53736/TicketSellerService.svc?xsd=xsd3" />
+    <MetadataFile FileName="TicketSellerService.xsd" MetadataType="Schema" ID="29959ca5-87bb-4f49-8f93-cf4de8c66452" SourceId="1" SourceUrl="http://localhost:53736/TicketSellerService.svc?xsd=xsd0" />
+    <MetadataFile FileName="TicketSellerService.wsdl" MetadataType="Wsdl" ID="8dead9a0-a662-4dd2-99c5-02a15f848a85" SourceId="1" SourceUrl="http://localhost:53736/TicketSellerService.svc?wsdl" />
+    <MetadataFile FileName="TicketSellerService1.xsd" MetadataType="Schema" ID="90fde5c6-eafd-419a-a7cb-f0707eed9826" SourceId="1" SourceUrl="http://localhost:53736/TicketSellerService.svc?xsd=xsd1" />
+    <MetadataFile FileName="TicketSellerService2.xsd" MetadataType="Schema" ID="49fb843a-56b9-4d25-bce2-ffdba069a44c" SourceId="1" SourceUrl="http://localhost:53736/TicketSellerService.svc?xsd=xsd2" />
+    <MetadataFile FileName="TicketSellerService.disco" MetadataType="Disco" ID="59a23daf-1813-4b42-8747-83338c9506de" SourceId="1" SourceUrl="http://localhost:53736/TicketSellerService.svc?disco" />
+    <MetadataFile FileName="TicketSellerService3.xsd" MetadataType="Schema" ID="59dc3a66-7fce-48ba-b16c-e345a640a8b2" SourceId="1" SourceUrl="http://localhost:53736/TicketSellerService.svc?xsd=xsd3" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

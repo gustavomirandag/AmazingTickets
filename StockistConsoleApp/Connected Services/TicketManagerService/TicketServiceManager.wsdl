@@ -25,6 +25,12 @@
   <wsdl:message name="ITicketManagerService_UpdateToSold_OutputMessage">
     <wsdl:part name="parameters" element="tns:UpdateToSoldResponse" />
   </wsdl:message>
+  <wsdl:message name="ITicketManagerService_DeleteAllTickets_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAllTickets" />
+  </wsdl:message>
+  <wsdl:message name="ITicketManagerService_DeleteAllTickets_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAllTicketsResponse" />
+  </wsdl:message>
   <wsdl:portType name="ITicketManagerService">
     <wsdl:operation name="AddTicket">
       <wsdl:input wsaw:Action="http://tempuri.org/ITicketManagerService/AddTicket" message="tns:ITicketManagerService_AddTicket_InputMessage" />
@@ -37,6 +43,10 @@
     <wsdl:operation name="UpdateToSold">
       <wsdl:input wsaw:Action="http://tempuri.org/ITicketManagerService/UpdateToSold" message="tns:ITicketManagerService_UpdateToSold_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITicketManagerService/UpdateToSoldResponse" message="tns:ITicketManagerService_UpdateToSold_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAllTickets">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITicketManagerService/DeleteAllTickets" message="tns:ITicketManagerService_DeleteAllTickets_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITicketManagerService/DeleteAllTicketsResponse" message="tns:ITicketManagerService_DeleteAllTickets_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ITicketManagerService" type="tns:ITicketManagerService">
@@ -61,6 +71,15 @@
     </wsdl:operation>
     <wsdl:operation name="UpdateToSold">
       <soap:operation soapAction="http://tempuri.org/ITicketManagerService/UpdateToSold" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAllTickets">
+      <soap:operation soapAction="http://tempuri.org/ITicketManagerService/DeleteAllTickets" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
